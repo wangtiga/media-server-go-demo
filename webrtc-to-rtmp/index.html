@@ -67,7 +67,7 @@
             //Play it
             removeVideoForStream(event.stream);
         };
-        socket = new WebSocket('ws://localhost:8000/channel');
+        socket = new WebSocket('ws://'+window.location.hostname+'/channel');
 
         socket.onopen = async () => {
             const stream = await navigator.mediaDevices.getUserMedia({

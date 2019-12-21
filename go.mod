@@ -13,6 +13,7 @@ require (
 	github.com/notedit/rtmp-lib v0.0.1
 	github.com/notedit/sdp v0.0.0-20190418080450-702b42591eb2
 	github.com/sanity-io/litter v1.1.0
+	github.com/wangtiga/gstrtmp v0.0.0-20191201043643-1135ced2c155 // indirect
 	github.com/wangtiga/media-server-go-demo/rtmp-to-webrtc/rtmpstreamer v0.0.0-20191124120429-73a90a395564
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 )

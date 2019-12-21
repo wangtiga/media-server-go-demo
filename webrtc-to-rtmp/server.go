@@ -10,10 +10,11 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"
 	"github.com/joho/godotenv"
-	gstrtmp "github.com/notedit/gstreamer-rtmp"
-	mediaserver "github.com/notedit/media-server-go"
-	rtmp "github.com/notedit/rtmp-lib"
+	//"github.com/notedit/gstreamer-rtmp"
+	"github.com/notedit/media-server-go"
+	"github.com/notedit/rtmp-lib"
 	"github.com/notedit/sdp"
+	"github.com/wangtiga/gstrtmp"
 )
 
 type Message struct {
@@ -115,7 +116,7 @@ func channel(c *gin.Context) {
 
 					videoTrack.OnMediaFrame(func(frame []byte, timestamp uint) {
 
-						fmt.Println("media frame ===========")
+						//fmt.Println("media frame ===========")
 						if len(frame) <= 4 {
 							return
 						}
@@ -171,7 +172,7 @@ func main() {
 	godotenv.Load()
 	mediaserver.EnableDebug(true)
 	mediaserver.EnableLog(true)
-	address := ":8000"
+	address := ":80"
 	if os.Getenv("port") != "" {
 		address = ":" + os.Getenv("port")
 	}
